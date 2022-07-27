@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/lucaskorz/clean-react.git",
   "author": "Lucas Korz <62682384+lucaskorz@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.3"
+  }
 }
