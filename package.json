@@ -5,6 +5,9 @@
   "repository": "https://github.com/lucaskorz/clean-react.git",
   "author": "Lucas Korz <62682384+lucaskorz@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/node": "^18.6.1",
@@ -17,7 +20,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "git-commit-msg-linter": "^4.1.3",
     "husky": "^8.0.1",
-    "jest": "^28.1.3",
+    "jest": "^25.5.4",
     "lint-staged": "^13.0.3",
     "ts-jest": "^28.0.7",
     "typescript": "^4.7.4"
