@@ -10,14 +10,7 @@
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage",
-    "prepare": "husky install",
-    "lint": "eslint src --max-warnings=0"
-  },
-  "lint-staged": {
-    "src/**/*": [
-      "npm run lint --fix"
-    ]
+    "test:ci": "npm test -- --coverage"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
