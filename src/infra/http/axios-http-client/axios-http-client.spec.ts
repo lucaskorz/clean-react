@@ -11,6 +11,7 @@ type SutTypes = {
 }
 const makeSut = (): SutTypes => {
   const sut = new AxiosHttpClient()
+
   const mockedAxios = mockAxios()
 
   return {
