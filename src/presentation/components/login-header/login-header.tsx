@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { memo } from 'react'
 import Styles from './login-header-styles.scss'
-import Logo from '@/presentation/components/logo/logo'
+import { Logo } from '@/presentation/components'
 
 const LoginHeader: React.FC = () => {
   return (
