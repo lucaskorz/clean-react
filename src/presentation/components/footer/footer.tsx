@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { memo } from 'react'
 import Styles from './footer-styles.scss'
 
