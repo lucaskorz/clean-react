@@ -6,10 +6,17 @@ import Context from '@/presentation/contexts/form/form-context'
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 const Input: React.FC<Props> = (props: Props) => {
-  const { errorState } = useContext(Context)
-  const error = errorState[props.name]
+  const { state, setState } = useContext(Context)
+  const error = state[`${props.name}Error`]
 
   const enableInput = (event: React.FocusEvent<HTMLInputElement>): void => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value
+    })
+  }
+
+  const handleChange = (event: React.FocusEvent<HTMLInputElement>): void => {
     event.target.readOnly = false
   }
 
@@ -25,8 +32,10 @@ const Input: React.FC<Props> = (props: Props) => {
     <div className={Styles.inputWrap}>
       <input
         {...props}
+        data-testid={props.name}
         readOnly
         onFocus={enableInput}
+        onChange={handleChange}
       />
 
       <span

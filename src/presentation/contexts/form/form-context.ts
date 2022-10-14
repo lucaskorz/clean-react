@@ -1,9 +1,9 @@
-import { ErrorState, State } from '@/presentation/pages/login/login'
+import { State } from '@/presentation/pages/login/login'
 import { createContext } from 'react'
 
 type TypeFormContext = {
   state: State
-  errorState: ErrorState
+  setState: React.Dispatch<React.SetStateAction<State>>
 }
 
 export default createContext(null as TypeFormContext)
