@@ -10,14 +10,14 @@ const Input: React.FC<Props> = (props: Props) => {
   const error = state[`${props.name}Error`]
 
   const enableInput = (event: React.FocusEvent<HTMLInputElement>): void => {
+    event.target.readOnly = false
+  }
+
+  const handleChange = (event: React.FocusEvent<HTMLInputElement>): void => {
     setState({
       ...state,
       [event.target.name]: event.target.value
     })
-  }
-
-  const handleChange = (event: React.FocusEvent<HTMLInputElement>): void => {
-    event.target.readOnly = false
   }
 
   const getStatus = (): string => {
